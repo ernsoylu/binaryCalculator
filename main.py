@@ -3,6 +3,7 @@ from tkinter import *
 root = Tk()
 root.title("Binary Calculator")
 root.geometry("370x300+250+250")
+root.resizable(False, False)
 frm = Frame(root)
 frm.grid()
 #Initialize Tkinter Variables as Base Variables
@@ -71,6 +72,5 @@ Checkbutton(frm, text="Bit 28", width=6, variable=bitArray[28], command=list_to_
 Checkbutton(frm, text="Bit 29", width=6, variable=bitArray[29], command=list_to_bin).grid(column=3, row=6, padx=3, pady=3)
 Checkbutton(frm, text="Bit 30", width=6, variable=bitArray[30], command=list_to_bin).grid(column=3, row=7, padx=3, pady=3)
 Checkbutton(frm, text="Bit 31", width=6, variable=bitArray[31], command=list_to_bin).grid(column=3, row=8, padx=3, pady=3)
-
 #Pack up root instance and start software.
 root.mainloop()
