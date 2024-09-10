@@ -38,8 +38,7 @@ def clear_all():
 #Add components
 #components spread across 4 column
 #text box spanned 2 columns ( 0 and 1 )
-entry_box = Entry(frm, textvariable=txt)
-entry_box.grid(column=0, row=0, columnspan=2,padx = 3, pady = 10)
+Entry(frm, textvariable=txt).grid(column=0, row=0, columnspan=2,padx = 3, pady = 10)
 #buttons start from column 2
 #Convert button invoke dec_to_bin_list function
 Button(frm, text="Convert", command=dec_to_bin_list).grid(column=2, row=0,padx = 3, pady = 10)
