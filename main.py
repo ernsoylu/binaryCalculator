@@ -1,7 +1,73 @@
 from tkinter import *
+def checkedfunc():
+    for i in bitArray:
+        print(i.get())
+
+def list_to_bin():
+    dec = 0
+    for i in range(0,len(bitArray)):
+        if bitArray[i].get():
+            dec += 1<<i
+    txt.set(str(dec))
+
+def dec_to_bin_list():
+    if int(txt.get()) > 4294967295:
+        txt.set("4294967295")
+    bin_val = bin(int(txt.get()))[2:]
+    for ind, val in enumerate(bin_val[::-1]):
+        if val == "1":
+            bitArray[ind].set(True)
+        else:
+            bitArray[ind].set(False)
+
+def clear_all():
+   for i in bitArray:
+       i.set(False)
+   txt.set("0")
+
 root = Tk()
+txt = StringVar()
+bitArray = [BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar()]
 root.title("Binary Calculator")
-root.minsize(200,200)
-root.maxsize(500,500)
-root.geometry("300x300+250+250")
+root.geometry("370x300+250+250")
+frm = Frame(root)
+frm.grid()
+entry_box = Entry(frm, textvariable=txt)
+entry_box.grid(column=0, row=0, columnspan=2,padx = 3, pady = 10)
+Button(frm, text="Convert", command=dec_to_bin_list).grid(column=2, row=0,padx = 3, pady = 10)
+Button(frm, text="Clear", command=clear_all).grid(column=3, row=0,padx = 3, pady = 10)
+
+Checkbutton(frm, text="Bit 0", width=6, variable=bitArray[0], command=list_to_bin).grid(column=0, row=1, padx=3, pady=3)
+Checkbutton(frm, text="Bit 1", width=6, variable=bitArray[1], command=list_to_bin).grid(column=0, row=2, padx=3, pady=3)
+Checkbutton(frm, text="Bit 2", width=6, variable=bitArray[2], command=list_to_bin).grid(column=0, row=3, padx=3, pady=3)
+Checkbutton(frm, text="Bit 3", width=6, variable=bitArray[3], command=list_to_bin).grid(column=0, row=4, padx=3, pady=3)
+Checkbutton(frm, text="Bit 4", width=6, variable=bitArray[4], command=list_to_bin).grid(column=0, row=5, padx=3, pady=3)
+Checkbutton(frm, text="Bit 5", width=6, variable=bitArray[5], command=list_to_bin).grid(column=0, row=6, padx=3, pady=3)
+Checkbutton(frm, text="Bit 6", width=6, variable=bitArray[6], command=list_to_bin).grid(column=0, row=7, padx=3, pady=3)
+Checkbutton(frm, text="Bit 7", width=6, variable=bitArray[7], command=list_to_bin).grid(column=0, row=8, padx=3, pady=3)
+Checkbutton(frm, text="Bit 8", width=6, variable=bitArray[8], command=list_to_bin).grid(column=1, row=1, padx=3, pady=3)
+Checkbutton(frm, text="Bit 9", width=6, variable=bitArray[9], command=list_to_bin).grid(column=1, row=2, padx=3, pady=3)
+Checkbutton(frm, text="Bit 10", width=6, variable=bitArray[10], command=list_to_bin).grid(column=1, row=3, padx=3, pady=3)
+Checkbutton(frm, text="Bit 11", width=6, variable=bitArray[11], command=list_to_bin).grid(column=1, row=4, padx=3, pady=3)
+Checkbutton(frm, text="Bit 12", width=6, variable=bitArray[12], command=list_to_bin).grid(column=1, row=5, padx=3, pady=3)
+Checkbutton(frm, text="Bit 13", width=6, variable=bitArray[13], command=list_to_bin).grid(column=1, row=6, padx=3, pady=3)
+Checkbutton(frm, text="Bit 14", width=6, variable=bitArray[14], command=list_to_bin).grid(column=1, row=7, padx=3, pady=3)
+Checkbutton(frm, text="Bit 15", width=6, variable=bitArray[15], command=list_to_bin).grid(column=1, row=8, padx=3, pady=3)
+Checkbutton(frm, text="Bit 16", width=6, variable=bitArray[16], command=list_to_bin).grid(column=2, row=1, padx=3, pady=3)
+Checkbutton(frm, text="Bit 17", width=6, variable=bitArray[17], command=list_to_bin).grid(column=2, row=2, padx=3, pady=3)
+Checkbutton(frm, text="Bit 18", width=6, variable=bitArray[18], command=list_to_bin).grid(column=2, row=3, padx=3, pady=3)
+Checkbutton(frm, text="Bit 19", width=6, variable=bitArray[19], command=list_to_bin).grid(column=2, row=4, padx=3, pady=3)
+Checkbutton(frm, text="Bit 20", width=6, variable=bitArray[20], command=list_to_bin).grid(column=2, row=5, padx=3, pady=3)
+Checkbutton(frm, text="Bit 21", width=6, variable=bitArray[21], command=list_to_bin).grid(column=2, row=6, padx=3, pady=3)
+Checkbutton(frm, text="Bit 22", width=6, variable=bitArray[22], command=list_to_bin).grid(column=2, row=7, padx=3, pady=3)
+Checkbutton(frm, text="Bit 23", width=6, variable=bitArray[23], command=list_to_bin).grid(column=2, row=8, padx=3, pady=3)
+Checkbutton(frm, text="Bit 24", width=6, variable=bitArray[24], command=list_to_bin).grid(column=3, row=1, padx=3, pady=3)
+Checkbutton(frm, text="Bit 25", width=6, variable=bitArray[25], command=list_to_bin).grid(column=3, row=2, padx=3, pady=3)
+Checkbutton(frm, text="Bit 26", width=6, variable=bitArray[26], command=list_to_bin).grid(column=3, row=3, padx=3, pady=3)
+Checkbutton(frm, text="Bit 27", width=6, variable=bitArray[27], command=list_to_bin).grid(column=3, row=4, padx=3, pady=3)
+Checkbutton(frm, text="Bit 28", width=6, variable=bitArray[28], command=list_to_bin).grid(column=3, row=5, padx=3, pady=3)
+Checkbutton(frm, text="Bit 29", width=6, variable=bitArray[29], command=list_to_bin).grid(column=3, row=6, padx=3, pady=3)
+Checkbutton(frm, text="Bit 30", width=6, variable=bitArray[30], command=list_to_bin).grid(column=3, row=7, padx=3, pady=3)
+Checkbutton(frm, text="Bit 31", width=6, variable=bitArray[31], command=list_to_bin).grid(column=3, row=8, padx=3, pady=3)
+
 root.mainloop()
