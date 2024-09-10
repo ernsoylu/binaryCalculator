@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1dc0dc23-aa05-46a0-8cc3-668678788165" name="Changes" comment="BinaryCalculator v0.0.1 Alfa 1 completed.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="1dc0dc23-aa05-46a0-8cc3-668678788165" name="Changes" comment="BinaryCalculator v0.0.1 Alfa 1 distribution created.">
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +84,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726005974450</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="BinaryCalculator v0.0.1 Alfa 1 distribution created.">
+      <option name="closed" value="true" />
+      <created>1726006709720</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1726006709720</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -102,6 +110,7 @@
     <MESSAGE value="Project created." />
     <MESSAGE value="Root Windows Created." />
     <MESSAGE value="BinaryCalculator v0.0.1 Alfa 1 completed." />
-    <option name="LAST_COMMIT_MESSAGE" value="BinaryCalculator v0.0.1 Alfa 1 completed." />
+    <MESSAGE value="BinaryCalculator v0.0.1 Alfa 1 distribution created." />
+    <option name="LAST_COMMIT_MESSAGE" value="BinaryCalculator v0.0.1 Alfa 1 distribution created." />
   </component>
 </project>

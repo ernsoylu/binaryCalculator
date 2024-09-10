@@ -1,8 +1,15 @@
 from tkinter import *
-def checkedfunc():
-    for i in bitArray:
-        print(i.get())
-
+#Initialize Tkinter Instance
+root = Tk()
+root.title("Binary Calculator")
+root.geometry("370x300+250+250")
+frm = Frame(root)
+frm.grid()
+#Initialize Tkinter Variables as Base Variables
+txt = StringVar()
+bitArray = [BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar()]
+#Initialize base functions for working on Bit Array
+#list_to_bin : convert bitArray boolean array to decimal than write decimal value to textbox
 def list_to_bin():
     dec = 0
     for i in range(0,len(bitArray)):
@@ -10,6 +17,7 @@ def list_to_bin():
             dec += 1<<i
     txt.set(str(dec))
 
+#dec_to_bin_list: convert textbox value decimal than binary, populate binary value to bit array bit by bit as boolean value
 def dec_to_bin_list():
     if int(txt.get()) > 4294967295:
         txt.set("4294967295")
@@ -20,23 +28,16 @@ def dec_to_bin_list():
         else:
             bitArray[ind].set(False)
 
+#clear_all: clear textbox and checkboxes via setting all values False in bit array
 def clear_all():
    for i in bitArray:
        i.set(False)
    txt.set("0")
 
-root = Tk()
-txt = StringVar()
-bitArray = [BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar(),BooleanVar()]
-root.title("Binary Calculator")
-root.geometry("370x300+250+250")
-frm = Frame(root)
-frm.grid()
 entry_box = Entry(frm, textvariable=txt)
 entry_box.grid(column=0, row=0, columnspan=2,padx = 3, pady = 10)
 Button(frm, text="Convert", command=dec_to_bin_list).grid(column=2, row=0,padx = 3, pady = 10)
 Button(frm, text="Clear", command=clear_all).grid(column=3, row=0,padx = 3, pady = 10)
-
 Checkbutton(frm, text="Bit 0", width=6, variable=bitArray[0], command=list_to_bin).grid(column=0, row=1, padx=3, pady=3)
 Checkbutton(frm, text="Bit 1", width=6, variable=bitArray[1], command=list_to_bin).grid(column=0, row=2, padx=3, pady=3)
 Checkbutton(frm, text="Bit 2", width=6, variable=bitArray[2], command=list_to_bin).grid(column=0, row=3, padx=3, pady=3)
