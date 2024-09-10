@@ -36,10 +36,16 @@ def clear_all():
    txt.set("0")
 
 #Add components
+#components spread across 4 column
+#text box spanned 2 columns ( 0 and 1 )
 entry_box = Entry(frm, textvariable=txt)
 entry_box.grid(column=0, row=0, columnspan=2,padx = 3, pady = 10)
+#buttons start from column 2
+#Convert button invoke dec_to_bin_list function
 Button(frm, text="Convert", command=dec_to_bin_list).grid(column=2, row=0,padx = 3, pady = 10)
+#Clear button invoke clear_all function
 Button(frm, text="Clear", command=clear_all).grid(column=3, row=0,padx = 3, pady = 10)
+#32 Check button added to the grid, each checkbux value attached to bit Array and click event command list_to_bin invoked
 Checkbutton(frm, text="Bit 0", width=6, variable=bitArray[0], command=list_to_bin).grid(column=0, row=1, padx=3, pady=3)
 Checkbutton(frm, text="Bit 1", width=6, variable=bitArray[1], command=list_to_bin).grid(column=0, row=2, padx=3, pady=3)
 Checkbutton(frm, text="Bit 2", width=6, variable=bitArray[2], command=list_to_bin).grid(column=0, row=3, padx=3, pady=3)

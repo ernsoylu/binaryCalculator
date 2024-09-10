@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1dc0dc23-aa05-46a0-8cc3-668678788165" name="Changes" comment="Code refactored.">
+    <list default="true" id="1dc0dc23-aa05-46a0-8cc3-668678788165" name="Changes" comment="Text input check logic added.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -125,7 +125,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726007763437</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Text input check logic added.">
+      <option name="closed" value="true" />
+      <created>1726008191774</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1726008191774</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -146,6 +154,7 @@
     <MESSAGE value="BinaryCalculator v0.0.1 Alfa 1 distribution created." />
     <MESSAGE value="Implementation comments added." />
     <MESSAGE value="Code refactored." />
-    <option name="LAST_COMMIT_MESSAGE" value="Code refactored." />
+    <MESSAGE value="Text input check logic added." />
+    <option name="LAST_COMMIT_MESSAGE" value="Text input check logic added." />
   </component>
 </project>
