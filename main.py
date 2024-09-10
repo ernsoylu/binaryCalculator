@@ -34,7 +34,6 @@ def clear_all():
        i.set(False)
    txt.set("0")
 
-
 #Add components
 entry_box = Entry(frm, textvariable=txt)
 entry_box.grid(column=0, row=0, columnspan=2,padx = 3, pady = 10)
