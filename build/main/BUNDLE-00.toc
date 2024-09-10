@@ -1,0 +1,3 @@
+([('main',
+   '/Users/erensoylu/PycharmProjects/tkinterGUIwork/dist/main',
+   'EXECUTABLE')],)
