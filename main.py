@@ -20,7 +20,7 @@ def list_to_bin():
 
 #dec_to_bin_list: convert textbox value decimal than binary, populate binary value to bit array bit by bit as boolean value
 def dec_to_bin_list():
-    if int(txt.get()) > 4294967295:
+    if not(txt.get().isnumeric()) or int(txt.get()) > 4294967295:
         txt.set("4294967295")
     bin_val = bin(int(txt.get()))[2:]
     for ind, val in enumerate(bin_val[::-1]):
