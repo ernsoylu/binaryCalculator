@@ -34,6 +34,8 @@ def clear_all():
        i.set(False)
    txt.set("0")
 
+
+#Add components
 entry_box = Entry(frm, textvariable=txt)
 entry_box.grid(column=0, row=0, columnspan=2,padx = 3, pady = 10)
 Button(frm, text="Convert", command=dec_to_bin_list).grid(column=2, row=0,padx = 3, pady = 10)
@@ -71,4 +73,5 @@ Checkbutton(frm, text="Bit 29", width=6, variable=bitArray[29], command=list_to_
 Checkbutton(frm, text="Bit 30", width=6, variable=bitArray[30], command=list_to_bin).grid(column=3, row=7, padx=3, pady=3)
 Checkbutton(frm, text="Bit 31", width=6, variable=bitArray[31], command=list_to_bin).grid(column=3, row=8, padx=3, pady=3)
 
+#Pack up root instance and start software.
 root.mainloop()
